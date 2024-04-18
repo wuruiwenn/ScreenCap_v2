@@ -1,0 +1,27 @@
+﻿/*按钮普通态*/
+QPushButton
+{
+    background-color:rgb(255,103,115);
+    width:200px;
+    height:50px;
+    color:white;
+    border-radius:5px;
+}
+
+/*按钮停留态*/
+QPushButton:hover
+{
+    background-color:rgb(255,103,115);
+}
+
+/*按钮按下态*/
+QPushButton:pressed
+{
+    background-color:rgb(229,92,103);
+    padding-left:3px;
+    padding-top:3px;
+}
+
+
+
+

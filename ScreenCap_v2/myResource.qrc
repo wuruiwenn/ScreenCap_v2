@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/reso">
+        <file>myBtnStyle/myBtnStyle.qss</file>
+        <file>imgs/guo.png</file>
+        <file>imgs/logo.svg</file>
+        <file>imgs/tray_logo.svg</file>
+    </qresource>
+    <qresource prefix="/MyBtnStyle"/>
+    <qresource prefix="/12345"/>
+    <qresource prefix="/Ops"/>
+</RCC>

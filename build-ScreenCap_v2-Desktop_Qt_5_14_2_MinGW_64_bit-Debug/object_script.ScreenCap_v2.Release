@@ -1,0 +1,11 @@
+temp_file/obj/SystemInfo.o
+temp_file/obj/main.o
+temp_file/obj/mainwidget.o
+temp_file/obj/screenbackwidget.o
+temp_file/obj/screencanvaswidget.o
+temp_file/obj/tools.o
+temp_file/obj/trayiconwidget.o
+temp_file/obj/qrc_myResource.o
+temp_file/obj/moc_mainwidget.o
+temp_file/obj/moc_screencanvaswidget.o
+temp_file/obj/moc_trayiconwidget.o
