@@ -23,6 +23,7 @@ int SystemInfo::getDevicePixelRatio(){
     return screenInfo->devicePixelRatio();
 }
 
+//获取当前桌面的截图原图
 QPixmap* SystemInfo::getDesktopScreen() {
 
     QDesktopWidget* desk = QApplication::desktop();
@@ -41,6 +42,7 @@ QPixmap* SystemInfo::getDesktopScreen() {
     return pixRet;
 }
 
+//获取当前桌面的截图原图的灰化图
 QPixmap* SystemInfo::getDesktopGrayScreen() {
     if(!m_originScreen){
         Tools::loger("还未获取原图，不能直接获取灰色图...");

@@ -34,13 +34,16 @@ private:
 
 public:
 
-    SystemInfo* systemInfo;
+    SystemInfo* m_systemInfo;
 
     QPixmap* m_originPixmap;//桌面当前截图原图
     QPixmap* m_grayPixmap;//桌面当前截图的灰化图
 
     void get_originPixmap();//获取桌面的截图原图，就是初始化m_originPixmap
     void get_grayPixmap();//获取 桌面的截图原图 的 灰度图，就是初始化m_grayPixmap
+
+protected:
+    void paintEvent(QPaintEvent* event) override;
 };
 
 #endif

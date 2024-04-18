@@ -16,8 +16,8 @@ public:
     QPixmap* getDesktopScreen();
     QPixmap* getDesktopGrayScreen();
 
-    QPixmap* m_originScreen;
-    QPixmap* m_grayScreen;
+    QPixmap* m_originScreen;//桌面当前截图原图
+    QPixmap* m_grayScreen;//桌面当前截图的灰化图
 
 private:
     QScreen* screenInfo;
