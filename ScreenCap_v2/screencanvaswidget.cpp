@@ -48,20 +48,16 @@ void ScreenCanvasWidget::initCanvas()
     m_originPixmap = nullptr;
     m_grayPixmap = nullptr;
 
-    //全屏化，无标题化，阴影化 ...
-    this->resize(1900,1200);
     this->setWindowTitle("ScreenCanvas");
-
+    this->setWindowIcon(QIcon(":/reso/imgs/logo.svg"));
 
     // 窗口置顶 + 隐藏标题栏
 //    this->setWindowFlags(Qt::WindowStaysOnTopHint | Qt::FramelessWindowHint);
+    this->setWindowFlags(Qt::WindowStaysOnTopHint | Qt::FramelessWindowHint);
 
     //设置承托截图的背景画布所在窗口的大小，一般是全屏
-//    this->setFixedSize(QGuiApplication::primaryScreen()->size());
-    this->setFixedSize(1200,800);//暂时先设置这
-    this->setWindowFlag(Qt::WindowStaysOnTopHint);//置顶
-//    this->resize(QGuiApplication::primaryScreen()->size());
-    this->setWindowIcon(QIcon(":/reso/imgs/logo.svg"));
+    this->setFixedSize(QGuiApplication::primaryScreen()->size());
+//    this->setFixedSize(1200,800);//暂时先设置这
 }
 
 
@@ -82,7 +78,11 @@ ScreenCanvasWidget* ScreenCanvasWidget::getSingleCanvas()
 void ScreenCanvasWidget::paintEvent(QPaintEvent *event)
 {
     qDebug() << "ScreenCanvasWidget paintEvent...";
+    qDebug() <<"==> [log: 执行paintEvent时，是否已经获取：m_originPixmap = " << m_originPixmap << "]";
+    qDebug() <<"==> [log: 执行paintEvent时，是否已经获取：m_grayPixmap = " << m_grayPixmap << "]";
 
+    QPainter painter(this);
+    painter.drawPixmap(QApplication::desktop()->rect(),*m_grayPixmap);
 
 }
 

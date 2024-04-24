@@ -69,5 +69,5 @@ void TrayiconWidget::initTray()
     tray->setContextMenu(trayMenu);
     tray->setIcon(QIcon(":/reso/imgs/tray_logo.svg"));
     tray->setToolTip("My Capture App");
-    tray->show();
+    tray->show();//让托盘显示在系统任务栏上
 }

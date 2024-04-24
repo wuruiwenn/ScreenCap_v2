@@ -33,7 +33,7 @@ QPixmap* SystemInfo::getDesktopScreen() {
                                        desk->size().width(),
                                        desk->size().height())
                 );
-    qDebug() << "获取桌面原图的截图...pixRet = " << pixRet ;
+    qDebug() << "==> [log: 获取桌面原图的截图...pixRet = " << pixRet <<"]" ;
     QString filepath = QGuiApplication::applicationDirPath() + "/origin_desktop_screen.jpg";
     qDebug() << "filepath = " << filepath;
     pixRet->save(filepath);
@@ -44,7 +44,7 @@ QPixmap* SystemInfo::getDesktopScreen() {
 
 //获取当前桌面的截图原图的灰化图
 QPixmap* SystemInfo::getDesktopGrayScreen() {
-    if(!m_originScreen){
+    if(!m_originScreen) {
         Tools::loger("还未获取原图，不能直接获取灰色图...");
         return nullptr;
     }
@@ -63,7 +63,7 @@ QPixmap* SystemInfo::getDesktopGrayScreen() {
     QString filepath = QGuiApplication::applicationDirPath()+"/gray_desktop_screen.jpg";
     pixRet->save(filepath);
 
-    qDebug() << "获取桌面原图的截图的灰色图...pixRet = " << pixRet;
+    qDebug() << "==> [log: 获取桌面原图的截图的灰色图...pixRet = " << pixRet << "]";
     m_grayScreen = pixRet;
 
     return m_grayScreen;
