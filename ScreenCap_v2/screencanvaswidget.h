@@ -22,15 +22,17 @@ public:
     ~ScreenCanvasWidget();
 
     //单例模式，对外开放的接口
-    static ScreenCanvasWidget* getSingleCanvas();
+//    static ScreenCanvasWidget* getSingleCanvas();
+
+    ScreenCanvasWidget();
     void initCanvas(); //初始化承托截图界面的Widget：最大化窗口、无边框等操作
 
 private:
-    ScreenCanvasWidget(); // 构造设为private，想定义为单例模式
+//    ScreenCanvasWidget(); // 构造设为private，想定义为单例模式
 
     //单例模式
     //唯一的对象实例
-    static ScreenCanvasWidget* m_singleCanvas;
+//    static ScreenCanvasWidget* m_singleCanvas;
 
 public:
 

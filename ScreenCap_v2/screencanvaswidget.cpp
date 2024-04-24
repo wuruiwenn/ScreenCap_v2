@@ -63,15 +63,15 @@ void ScreenCanvasWidget::initCanvas()
 
 //单例模式，初始化
 //懒汉式
-ScreenCanvasWidget* ScreenCanvasWidget::m_singleCanvas = nullptr;
-ScreenCanvasWidget* ScreenCanvasWidget::getSingleCanvas()
-{
-    if(m_singleCanvas == nullptr)
-    {
-        m_singleCanvas = new ScreenCanvasWidget();
-    }
-    return m_singleCanvas;
-}
+//ScreenCanvasWidget* ScreenCanvasWidget::m_singleCanvas = nullptr;
+//ScreenCanvasWidget* ScreenCanvasWidget::getSingleCanvas()
+//{
+//    if(m_singleCanvas == nullptr)
+//    {
+//        m_singleCanvas = new ScreenCanvasWidget();
+//    }
+//    return m_singleCanvas;
+//}
 
 //当前Widget初始化显示出来的时候，就会调用 paintEvent
 //当前Widget最小化后，点击任务栏重新打开时，也会执行 paintEvent

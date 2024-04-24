@@ -41,7 +41,8 @@ void TrayiconWidget::trayActivatedHandler(QSystemTrayIcon::ActivationReason reas
 
 void TrayiconWidget::showScreenCanvas()
 {
-    screenCanvas = ScreenCanvasWidget::getSingleCanvas();
+//    screenCanvas = ScreenCanvasWidget::getSingleCanvas();
+    screenCanvas = new ScreenCanvasWidget();
     screenCanvas->show();
 }
 
